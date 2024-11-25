@@ -30,7 +30,13 @@ const userRoutes = [
         method: 'DELETE',
         path: '/users/{userId}',
         handler: UsersController.deleteUser,
-    }
+    },
+    {
+        method: 'GET',
+        path: '/profile',
+        handler: UsersController.getProfile,
+    },
+
 ];
 
 module.exports = userRoutes;

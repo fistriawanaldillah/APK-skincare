@@ -1,24 +1,28 @@
+require('dotenv').config();// Memuat variabel lingkungan dari file .env
+
 const Hapi = require('@hapi/hapi');
-const userRoutes = require('./routes/userRoutes'); 
+const userRoutes = require('./routes/userRoutes'); // pastiin file routes bener
 
 const init = async () => {
+    // Membuat server dengan konfigurasi dari .env atau default
     const server = Hapi.server({
-        port: 3000, 
-        host: 'localhost', 
+        port: process.env.PORT || 3000, 
+        host: process.env.HOST || 'localhost', // masi localhost blm di deploy
     });
 
-    
+    // Menyambungkan route ke server
     server.route(userRoutes);
 
-    await server.start(); 
+    // Mulai server
+    await server.start();
     console.log(`Server running on ${server.info.uri}`);
 };
 
-// Menangani unhandled rejection
+// Menangani unhandled rejection untuk menjaga server tetap berjalan
 process.on('unhandledRejection', (err) => {
     console.log(err);
     process.exit(1);
 });
 
-// Inisialisasi server
+// Menjalankan server
 init();
