@@ -1,0 +1,113 @@
+{
+	"info": {
+		"_postman_id": "861050a0-fc54-462b-a383-f090aa870e8a",
+		"name": "API CAPSTONE",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "39547130"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"brodi.com\",\r\n    \"password\": \"12345678\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://capstone-project-442222.et.r.appspot.com/auth/login",
+					"protocol": "https",
+					"host": [
+						"capstone-project-442222",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"nanana\",\r\n    \"email\": \"brodi.com\",\r\n    \"password\": \"12345678\"\r\n}\r\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://capstone-project-442222.et.r.appspot.com/auth/signup",
+					"protocol": "https",
+					"host": [
+						"capstone-project-442222",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"auth",
+						"signup"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET USER",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-access-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwdWJsaWNfaWQiOiI0MmI1ZjhhNy04NWIwLTQ0MTctODM1ZC0xMDM4ZGZjODhlN2QiLCJleHAiOjE3MzI3MDgxNjh9.swzCrLGK0aBWfU0Ljn01nU9Z4a5isIQha1OGnb-yGAM",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "graphql",
+					"graphql": {
+						"query": "",
+						"variables": ""
+					}
+				},
+				"url": {
+					"raw": "https://capstone-project-442222.et.r.appspot.com/auth/users",
+					"protocol": "https",
+					"host": [
+						"capstone-project-442222",
+						"et",
+						"r",
+						"appspot",
+						"com"
+					],
+					"path": [
+						"auth",
+						"users"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
