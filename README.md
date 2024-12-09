@@ -52,10 +52,10 @@
 
 ---
 
-### 3. **Get Authenticated Users**
+### 3. **Get Authenticated Profile**
 
 - **URL**  
-  /auth/users
+  /auth/profile
   
 - **Method**  
   GET
