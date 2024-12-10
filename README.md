@@ -76,3 +76,33 @@
   }
   ```
 
+  ### 4. **Get Authenticated Profile**
+
+- **URL**  
+  /process-image
+  
+- **Method**  
+  POST
+  
+- **Body**  
+  - image: contoh.png
+
+- **Response**  
+  ```json
+  {
+            "function": "Plant extract for which there is a small amount of research showing it has skin soothing and antioxidant properties.",
+            "name": "tricolor",
+            "predicted_rating": "AVERAGE"
+        },
+        {
+            "function": "Scutellaria baicalensis root extract comes from a flowering plant native to China.",
+            "name": "scutellaria",
+            "predicted_rating": "GOOD"
+        },
+    "predicted_skincare_categories": [
+        "For Mature Skin",
+        "For Sensitive Skin"
+    ]
+  }
+  ```
+
